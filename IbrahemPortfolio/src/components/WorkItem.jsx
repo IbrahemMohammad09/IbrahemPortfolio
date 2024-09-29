@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WorkItem = ({year,title,duration,details}) => {
+const WorkItem = ({year,title,duration,details,url}) => {
   return (
     <ol className='flex flex-col m:flex-row relative border-l border-stone-200'>
       <li className='mb-10 ml-4'>
@@ -11,6 +11,7 @@ const WorkItem = ({year,title,duration,details}) => {
           <span className='my-1 text-sm font-normal leading-none text-stone-400'>{duration}</span>
         </p>
         <p className='my-2 text-base font-normal text-stone-500'>{details}</p>
+        <p className='my-2 text-base font-normal text-stone-500'>{url}</p>
       </li>
     </ol>
   )
