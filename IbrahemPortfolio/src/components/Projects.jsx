@@ -21,6 +21,11 @@ const data2 = [
       img:img3,
       details:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nihil nesciunt accusantium exercitationem itaque obcaecati nam commodi eum autem omnis, placeat cupiditate? Autem consequatur iusto nemo itaque fugiat repellat deleniti."
     },
+    {
+      title:"313",
+      img:img3,
+      details:" Tempore nihil nesciunt accusantium exercitationem itaque obcaecati nam commodi eum autem omnis, placeat cupiditate? Autem consequatur iusto nemo itaque fugiat repellat deleniti."
+    },
   ]
 
 const Projects = () => {
@@ -28,7 +33,7 @@ const Projects = () => {
   return (
     <div id='projects' className='max-w-[1040px] m-auto md:pl-20 p-4 py-16'>
         <h1 className='text-4xl font-bold text-center text-[#001b5e]'>Projects</h1>
-        <p className='text-center py-8'> 
+        <p className='text-center py-9'> 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Tempore nihil nesciunt accusantium exercitationem itaque obcaecati nam commodi eum autem omnis, 
             placeat cupiditate? Autem consequatur iusto nemo itaque fugiat repellat deleniti.
