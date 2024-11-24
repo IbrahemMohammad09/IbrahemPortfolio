@@ -18,7 +18,17 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     
-    emailjs.sendForm('service_cbrkr8s', 'template_9wci25i', e.target, '5vJT1QDohQIqCsVh5')
+    // الحصول على القيم من الـ formData
+    const { name, phone, email, subject, message } = formData;
+  
+    // إرسال القيم إلى EmailJS
+    emailjs.send('service_cbrkr8s', 'template_9wci25i', {
+      from_name: name,
+      from_email: email,
+      phone,
+      subject,
+      message,
+    }, '5vJT1QDohQIqCsVh5')
       .then((result) => {
           console.log(result.text);
           alert('Message Sent Successfully!');
@@ -28,10 +38,12 @@ const Contact = () => {
       });
   };
   
+  
   return (
 
     <div id='contact' className='max-w-[1040px] m-auto md:pl-20 p-4 py-16'>
     <h1 className='py-4 text-4xl font-bold text-center text-[#001b5e]'>Contact</h1>
+
     <form onSubmit={sendEmail} method='POST' encType='multipart/form-data'>
       <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
         <div className='flex flex-col'>
